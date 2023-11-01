@@ -1,0 +1,22 @@
+{
+  "name": "CiString",
+  "version": "1.0.0",
+  "description": "A simple subclass of std::string but with compare operators to allow case-insensitive string comparison.",
+  "keywords": "string",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Tirus42/CiString.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Tirus",
+      "maintainer": true
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/Tirus42/CiString",
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}
