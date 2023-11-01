@@ -1,6 +1,6 @@
 {
   "name": "CiString",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple subclass of std::string but with compare operators to allow case-insensitive string comparison.",
   "keywords": "string",
   "repository":
