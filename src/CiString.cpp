@@ -1,5 +1,7 @@
 #include "CiString.h"
 
+#include <cstring>
+
 CiString::CiString() :
     std::string() {}
 
@@ -46,8 +48,8 @@ bool CiString::operator>(const std::string& other) const {
     return this->size() > other.size();
 }
 
-bool CiString::operator==(const std::string& other) const {
-    if (size() != other.size())
+bool CiString::equals(const char* other, size_t strLength) const {
+    if (size() != strLength)
         return false;
 
     for (size_t i = 0; i < size(); ++i) {
@@ -62,6 +64,18 @@ bool CiString::operator==(const std::string& other) const {
     return true;
 }
 
+bool CiString::operator==(const std::string& other) const {
+    return equals(other.c_str(), other.size());
+}
+
 bool CiString::operator!=(const std::string& other) const {
+    return !(*this == other);
+}
+
+bool CiString::operator==(const char* other) const {
+    return equals(other, std::strlen(other));
+}
+
+bool CiString::operator!=(const char* other) const {
     return !(*this == other);
 }

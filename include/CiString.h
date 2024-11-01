@@ -9,6 +9,9 @@
  * Just overrides the <, >, == and != operator.
 */
 class CiString : public std::string {
+    private:
+        bool equals(const char* other, size_t strLength) const;
+
     public:
         CiString();
         CiString(const char* str);
@@ -20,4 +23,7 @@ class CiString : public std::string {
 
         bool operator==(const std::string& other) const;
         bool operator!=(const std::string& other) const;
+
+        bool operator==(const char* other) const;
+        bool operator!=(const char* other) const;
 };
